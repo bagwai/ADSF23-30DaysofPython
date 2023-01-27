@@ -1,0 +1,35 @@
+#30 Days of Python Programming
+# Arewa Data Science Fellowship 
+# Day 5
+# Exercises Level 2
+
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+
+print(ages.sort())
+min_age = min(ages)
+max_age = max(ages)
+
+ages.append(min_age)
+ages.append(max_age)
+
+if len(ages) % 2 == 0:
+    median_age = (ages[len(ages)//2] + ages[len(ages)//2 - 1])/2
+else:
+    median_age = ages[len(ages)//2]
+
+average_age = sum(ages)/len(ages)
+
+range_ages = max_age - min_age
+
+countries = ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
+if len(countries) % 2 == 0:
+    middle_countries = [countries[len(countries)//2],countries[len(countries)//2 - 1]]
+else:
+    middle_countries = countries[len(countries)//2]
+
+first_half_countries = countries[:len(countries)//2]
+second_half_countries = countries[len(countries)//2:]
+
+# List unpack
+first_3_countries, *scandic_countries = countries
+
