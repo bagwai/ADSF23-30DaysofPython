@@ -1,6 +1,6 @@
 #30 Days of Python Programming
 # Arewa Data Science Fellowship 
-# Day 8
+# Day 9
 # Exercises Level 1
 
 #1. Getting user input using input
