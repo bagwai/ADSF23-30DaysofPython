@@ -1,6 +1,6 @@
 #30 Days of Python Programming
 # Arewa Data Science Fellowship 
-# Day 19
+# Day 18
 
 def count_lines_and_words(filename):
     # Open the file
