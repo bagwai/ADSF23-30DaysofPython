@@ -1,38 +1,28 @@
 #30 Days of Python Programming
 # Arewa Data Science Fellowship 
-# Day 18
+# Day 19
+import os
 
 def count_lines_and_words(filename):
-    # Open the file
-    with open(filename, 'r') as file:
-        # Read the entire file
+    filepath = os.path.join('data', filename)
+    with open(filepath, 'r') as file:
         text = file.read()
-        # Count the number of lines
-        num_lines = len(text.split('\n'))
-        # Count the number of words
-        num_words = len(text.split())
-    # Return the results
-    return num_lines, num_words
+        lines = text.splitlines()
+        words = text.split()
+    return len(lines), len(words)
 
-# Call the function on each text file
-obama_lines, obama_words = count_lines_and_words('./ADSF23-30DaysofPython/data/obama_speech.txt')
-michelle_lines, michelle_words = count_lines_and_words('./ADSF23-30DaysofPython/data/michelle_obama_speech.txt')
-donald_lines, donald_words = count_lines_and_words('./ADSF23-30DaysofPython/data/donald_speech.txt')
-melania_lines, melania_words = count_lines_and_words('./ADSF23-30DaysofPython/data/melania_trump_speech.txt')
+# Obama speech
+obama_lines, obama_words = count_lines_and_words('obama_speech.txt')
+print(f"Obama speech has {obama_lines} lines and {obama_words} words.\n")
 
-# Print the results
-print('Obama speech:')
-print('Number of lines:', obama_lines)
-print('Number of words:', obama_words)
+# Michelle Obama speech
+michelle_lines, michelle_words = count_lines_and_words('michelle_obama_speech.txt')
+print(f"Michelle Obama speech has {michelle_lines} lines and {michelle_words} words.\n")
 
-print('Michelle Obama speech:')
-print('Number of lines:', michelle_lines)
-print('Number of words:', michelle_words)
+# Donald Trump speech
+donald_lines, donald_words = count_lines_and_words('donald_speech.txt')
+print(f"Donald Trump speech has {donald_lines} lines and {donald_words} words.\n")
 
-print('Donald Trump speech:')
-print('Number of lines:', donald_lines)
-print('Number of words:', donald_words)
-
-print('Melania Trump speech:')
-print('Number of lines:', melania_lines)
-print('Number of words:', melania_words)
+# Melania Trump speech
+melania_lines, melania_words = count_lines_and_words('melina_trump_speech.txt')
+print(f"Melania Trump speech has {melania_lines} lines and {melania_words} words.\n")
