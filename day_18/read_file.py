@@ -14,7 +14,7 @@ def count_lines_and_words(filename):
     # Return the results
     return num_lines, num_words
 
-# Call the function on each text file
+# Call the function on each text filehttps://github.com/bagwai/web-scrapping.git
 obama_lines, obama_words = count_lines_and_words('./ADSF23-30DaysofPython/data/obama_speech.txt')
 michelle_lines, michelle_words = count_lines_and_words('./ADSF23-30DaysofPython/data/michelle_obama_speech.txt')
 donald_lines, donald_words = count_lines_and_words('./ADSF23-30DaysofPython/data/donald_speech.txt')
